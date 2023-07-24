@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18047628, g: 0.22594371, b: 0.3070305, a: 1}
+  m_IndirectSpecularColor: {r: 0.1804766, g: 0.22594386, b: 0.307031, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2206,7 +2206,7 @@ GameObject:
   - component: {fileID: 1108269280}
   - component: {fileID: 1108269279}
   m_Layer: 0
-  m_Name: Tembok Kanan (2)
+  m_Name: Launcher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
