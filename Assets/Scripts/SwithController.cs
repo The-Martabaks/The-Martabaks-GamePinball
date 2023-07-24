@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwitchController : MonoBehaviour
+public class SwithController : MonoBehaviour
 {
     private enum SwitchState
     {
@@ -14,7 +14,7 @@ public class SwitchController : MonoBehaviour
     // Menyimpan collider bola
     public Collider bola;
 
-    // Menyimpan variabel material nyala dan mati untuk merubah warna
+    // Menimpan variabel material nyala dan mati untuk merubah warna
     public Material offMaterial;
     public Material onMaterial;
 
