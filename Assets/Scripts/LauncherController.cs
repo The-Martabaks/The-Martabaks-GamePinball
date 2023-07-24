@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LauncherController : MonoBehaviour
 {
-   public Collider bola;
+  public Collider bola;
   public KeyCode input;
 
   public float maxTimeHold;
@@ -20,10 +20,10 @@ public class LauncherController : MonoBehaviour
 
   private void OnCollisionStay(Collision collision)
   {
-    if (collision.collider == bola)
-    {
-      ReadInput(bola);
-    }
+        if (collision.collider == bola)
+        {
+          ReadInput(bola);
+        }
   }
 
   private void ReadInput(Collider collider)
