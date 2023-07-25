@@ -43,15 +43,15 @@ public class CoinController : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
-    {
-        // Memastikan yang menabrak adalah bola
-        if (other == bola)
-        {
-            Destroy(coinClone);
-            // Toggle();
-        }
-    }
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     // Memastikan yang menabrak adalah bola
+    //     if (other == bola)
+    //     {
+    //         Destroy(coinClone);
+    //         // Toggle();
+    //     }
+    // }
 
     // Fungsi untuk toggle
     // private void Toggle()
