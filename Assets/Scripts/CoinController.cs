@@ -24,15 +24,17 @@ public class CoinController : MonoBehaviour
     public Collider bola;
 
     // Menggantikan isOn
-    private SwitchState state;
+    //private SwitchState state;
     private int maxCoin = 3;
     private int coinCounter = 0;
 
     private void Start()
     {
-        Set(true);
+        //Set(true);
+        StartCoroutine(AddCoin(1));
         StartCoroutine(CoinTimerOff(10));
     }
+    
 
     void spawnCoin()
     {
@@ -46,38 +48,40 @@ public class CoinController : MonoBehaviour
         // Memastikan yang menabrak adalah bola
         if (other == bola)
         {
-            Toggle();
+            Destroy(coinClone);
+            // Toggle();
         }
     }
 
     // Fungsi untuk toggle
-    private void Toggle()
-    {
-        if (state == SwitchState.On || state == SwitchState.Add)
-        {
-            Set(false);
-        }
-    }
+    // private void Toggle()
+    // {
+    //     if (state == SwitchState.On || state == SwitchState.Add)
+    //     {
+    //         Set(false);
+            
+    //     }
+    // }
 
-    private void Set(bool active)
-    {
-        if (active == true)
-        {
-            state = SwitchState.On;
+    // private void Set(bool active)
+    // {
+    //     if (active == true)
+    //     {
+    //         state = SwitchState.On;
 
-            StartCoroutine(AddCoin(1));
-        }
-        else
-        {
-            state = SwitchState.Off;
-            Destroy(coinClone);
-        }
-    }
+    //         StartCoroutine(AddCoin(1));
+    //     }
+    //     else
+    //     {
+    //         state = SwitchState.Off;
+    //         Destroy(coinClone);
+    //     }
+    // }
 
     private IEnumerator AddCoin(int times)
     {
-        state = SwitchState.Add;
-        if (coinCounter < maxCoin)
+        //state = SwitchState.Add;
+        while (coinCounter < maxCoin)
         {
             yield return new WaitForSeconds(3);
             spawnCoin();
@@ -92,7 +96,9 @@ public class CoinController : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         Destroy(coinClone);
-        Debug.Log("coin mati");
+        coinCounter -= 1;
+        Debug.Log("coin mati " + coinCounter);
         StartCoroutine(AddCoin(1));
+        
     }
 }
