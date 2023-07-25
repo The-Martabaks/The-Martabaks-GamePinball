@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.1804766, g: 0.22594386, b: 0.307031, a: 1}
+  m_IndirectSpecularColor: {r: 0.18047628, g: 0.22594371, b: 0.3070305, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -700,7 +700,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!59 &148230424
 HingeJoint:
@@ -1178,6 +1178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54feb35e0a4478468b0524ad238644d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinPrefab: {fileID: 5237406692449922263, guid: 0c1351c88b5ce244c8f14c2a88d77aba, type: 3}
   coinSpawnPoint:
   - {fileID: 1460670200}
   - {fileID: 823776231}
@@ -1185,7 +1186,6 @@ MonoBehaviour:
   - {fileID: 1904567582}
   - {fileID: 1359112866}
   bola: {fileID: 1948973068}
-  coin: {fileID: 1460670196}
 --- !u!4 &498335693
 Transform:
   m_ObjectHideFlags: 0
@@ -1401,7 +1401,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!59 &577802820
 HingeJoint:
@@ -4002,11 +4002,6 @@ Transform:
   m_Father: {fileID: 1211465589}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1460670196 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5237406692449922263, guid: 0c1351c88b5ce244c8f14c2a88d77aba, type: 3}
-  m_PrefabInstance: {fileID: 67326706}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1460670200 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5237406692449922251, guid: 0c1351c88b5ce244c8f14c2a88d77aba, type: 3}
@@ -4657,7 +4652,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5681966161518319313, guid: fd3dc9f3cb62cdf418e3984d74525d23, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5681966161518319313, guid: fd3dc9f3cb62cdf418e3984d74525d23, type: 3}
       propertyPath: m_LocalScale.x
