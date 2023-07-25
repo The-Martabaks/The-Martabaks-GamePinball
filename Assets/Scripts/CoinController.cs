@@ -32,7 +32,7 @@ public class CoinController : MonoBehaviour
     {
         //Set(true);
         StartCoroutine(AddCoin(1));
-        StartCoroutine(CoinTimerOff(10));
+        //StartCoroutine(CoinTimerOff(10));
     }
     
 
@@ -94,7 +94,7 @@ public class CoinController : MonoBehaviour
     // Enum untuk mengatur state
     private IEnumerator CoinTimerOff(float time)
     {
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(10);
         Destroy(coinClone);
         coinCounter -= 1;
         Debug.Log("coin mati " + coinCounter);
