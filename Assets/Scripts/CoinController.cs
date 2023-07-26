@@ -56,7 +56,8 @@ public class CoinController : MonoBehaviour
 
 
     private IEnumerator AddCoin(int times)
-    {
+    {   
+        StartCoroutine(CoinTimerOff(10));
         while (coinCounter < maxCoin)
         {
             yield return new WaitForSeconds(3);
@@ -77,4 +78,5 @@ public class CoinController : MonoBehaviour
         StartCoroutine(AddCoin(1));
         
     }
+
 }
