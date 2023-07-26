@@ -5,7 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     public Collider bola;
-  
+
     void Update()
     {
         transform.Rotate(new Vector3(0f, 0f, 150f) * Time.deltaTime);
@@ -14,8 +14,6 @@ public class Coin : MonoBehaviour
     {
         Rigidbody bolaRig = bola.GetComponent<Rigidbody>();
         Destroy(gameObject);
-        
-        
         
     }
 
