@@ -17,18 +17,18 @@ public class CoinController : MonoBehaviour
     // Menyimpan collider bola
     public Collider bola;
 
-    // Menggantikan isOn
-    //private SwitchState state;
     private int maxCoin = 3;
-    private int coinCounter = 0;
+    public int coinCounter = 0;
+
+    //Coin m_coin;
 
     private void Start()
     {
-        //Set(true);
         StartCoroutine(AddCoin(1));
         //StartCoroutine(CoinTimerOff(10));
     }
-    
+
+   
 
     void spawnCoin()
     {
@@ -36,26 +36,10 @@ public class CoinController : MonoBehaviour
         coinClone = Instantiate(coinPrefab, coinSpawnPoint[spawnIndex].position, coinPrefab.transform.rotation);
     }
 
-    // void OnCollisionEnter(Collision collision)
-    // {
-    //     Rigidbody bolaRig = bola.GetComponent<Rigidbody>();
-    //     Debug.Log("Kena Koin");
-    //     Destroy(coinClone);
-        
-    // }
-
-    // private void OnTriggerEnter(Collider other)
-    // {
-    //     // Memastikan yang menabrak adalah bola
-    //     if (other == bola)
-    //     {
-    //         Destroy(coinClone);
-    //         // Toggle();
-    //     }
-    // }
 
 
-    private IEnumerator AddCoin(int times)
+
+    public IEnumerator AddCoin(int times)
     {   
         StartCoroutine(CoinTimerOff(10));
         while (coinCounter < maxCoin)
