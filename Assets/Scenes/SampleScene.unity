@@ -1165,7 +1165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &498335693
 Transform:
   m_ObjectHideFlags: 0
@@ -3878,6 +3878,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1363313767}
+  - component: {fileID: 1363313768}
   m_Layer: 0
   m_Name: CoinSpawnPoint
   m_TagString: Untagged
@@ -3905,6 +3906,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1363313768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363313766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54feb35e0a4478468b0524ad238644d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPrefab: {fileID: 5237406692449922263, guid: 0c1351c88b5ce244c8f14c2a88d77aba, type: 3}
+  coinSpawnPoint:
+  - {fileID: 1460670200}
+  - {fileID: 823776231}
+  - {fileID: 869396233}
+  - {fileID: 1904567582}
+  - {fileID: 1359112866}
+  bola: {fileID: 1948973068}
 --- !u!1 &1407979840
 GameObject:
   m_ObjectHideFlags: 0

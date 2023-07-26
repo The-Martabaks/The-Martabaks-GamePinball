@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class CoinController : MonoBehaviour
 {
-    private enum SwitchState
-    {
-        Off,
-        On,
-        Add
-    }
 
     [SerializeField]
     private GameObject coinPrefab;
@@ -42,45 +36,27 @@ public class CoinController : MonoBehaviour
         coinClone = Instantiate(coinPrefab, coinSpawnPoint[spawnIndex].position, coinPrefab.transform.rotation);
     }
 
-
-    private void OnTriggerEnter(Collider other)
-    {
-        // Memastikan yang menabrak adalah bola
-        if (other == bola)
-        {
-            Destroy(coinClone);
-            // Toggle();
-        }
-    }
-
-    // Fungsi untuk toggle
-    // private void Toggle()
+    // void OnCollisionEnter(Collision collision)
     // {
-    //     if (state == SwitchState.On || state == SwitchState.Add)
-    //     {
-    //         Set(false);
-            
-    //     }
+    //     Rigidbody bolaRig = bola.GetComponent<Rigidbody>();
+    //     Debug.Log("Kena Koin");
+    //     Destroy(coinClone);
+        
     // }
 
-    // private void Set(bool active)
+    // private void OnTriggerEnter(Collider other)
     // {
-    //     if (active == true)
+    //     // Memastikan yang menabrak adalah bola
+    //     if (other == bola)
     //     {
-    //         state = SwitchState.On;
-
-    //         StartCoroutine(AddCoin(1));
-    //     }
-    //     else
-    //     {
-    //         state = SwitchState.Off;
     //         Destroy(coinClone);
+    //         // Toggle();
     //     }
     // }
+
 
     private IEnumerator AddCoin(int times)
     {
-        //state = SwitchState.Add;
         while (coinCounter < maxCoin)
         {
             yield return new WaitForSeconds(3);
